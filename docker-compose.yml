@@ -11,6 +11,6 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - docker_test:/data/db
+      - ./docker_test:/data/db
 volumes:
   docker_test:
