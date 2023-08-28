@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  node:
+    build: ./node
+    ports:
+      - 3001:3001
+    environment:
+      - DB_URL=mongodb://db:27017
+  db:
+    image: mongo:4.0-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - docker_test:/data/db
+volumes:
+  docker_test:
